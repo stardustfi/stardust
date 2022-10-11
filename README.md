@@ -45,6 +45,29 @@ contract ContractTest is Test {
 }
 ```
 
-## Development
+## Working with Brownie
 
-This project uses [Foundry](https://getfoundry.sh). See the [book](https://book.getfoundry.sh/getting-started/installation.html) for instructions on how to install and use Foundry.
+To install dependencies:
+
+```
+pip install virtualenv
+virtualenv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+### Basic Use
+
+To deploy the demo Badger Strategy in a development environment:
+
+1. Open the Brownie console. This automatically launches Ganache on a forked mainnet.
+
+```bash
+  brownie console
+```
+
+2. Run Scripts for Deployment
+
+```
+  brownie run deploy
+```
