@@ -110,3 +110,7 @@ To deploy the demo Badger Strategy in a development environment:
 ```
   brownie run deploy
 ```
+
+## Important
+
+Make sure the foundry dependencies found in `remappings.txt`, `Makefile` and `foundry.toml` are the same version and branch as those used in the `brownie-config.yaml`.
