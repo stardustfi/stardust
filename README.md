@@ -15,13 +15,9 @@
 ```sh
 git clone --recursive https://github.com/stardustfi/stardust
 
-# or clone normally and pull submodules
-git clone https://github.com/stardustfi/stardust
-git pull --recurse-submodules
-
 ```
 
-NOTE: if you create from template you may need to run the following command to fetch the git submodules (.gitmodules for exact releases) `git submodule init && git submodule update`
+NOTE: if you create from template you may need to run the following command to fetch the git submodules (.gitmodules for exact releases) `git submodule init && git submodule update`. You can also use `git pull --recurse-submodules` to attach submodules.
 
 4. Build the project.
 
@@ -93,6 +89,7 @@ pip install virtualenv
 virtualenv venv
 source venv/bin/activate
 pip install -r requirements.txt
+export WEB3_INFURA_PROJECT_ID={ENTER_YOUR_INFURA_ID}
 ```
 
 ### Basic Use
@@ -102,7 +99,7 @@ To deploy the demo Badger Strategy in a development environment:
 1. Open the Brownie console. This automatically launches Ganache on a forked mainnet.
 
 ```bash
-  brownie console
+  brownie console --network anvil-fork
 ```
 
 2. Run Scripts for Deployment
