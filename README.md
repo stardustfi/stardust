@@ -1,18 +1,29 @@
-# <h1 align="center"> Forge Template </h1>
+# <h1 align="center"> Brownie + Foundry Template </h1>
 
 **Template repository for getting started quickly with Foundry projects**
 
 ![Github Actions](https://github.com/foundry-rs/forge-template/workflows/CI/badge.svg)
 
-## Getting Started
+## Local development
 
-Click "Use this template" on [GitHub](https://github.com/foundry-rs/forge-template) to create a new repository with this repo as the initial state.
+This project uses [Foundry](https://github.com/gakonst/foundry) as the development framework.
 
-Or, if your repo already exists, run:
-```sh
-forge init
-forge build
-forge test
+### Dependencies
+
+```
+make update
+```
+
+### Compilation
+
+```
+make build
+```
+
+### Testing
+
+```
+make test
 ```
 
 ## Writing your first test
