@@ -1,7 +1,13 @@
 # exclude SafeMath when calculating test coverage
 # https://eth-brownie.readthedocs.io/en/v1.10.3/config.html#exclude_paths
-contracts: src
-scripts: ./scripts
+project_structure:
+    contracts: src
+    scripts: brownie/scripts
+    build: brownie/build
+    contracts: brownie/contracts
+    interfaces: brownie/interfaces
+    reports: brownie/reports
+    tests: brownie/tests
 reports:
     exclude_contracts:
         - SafeMath
@@ -17,5 +23,3 @@ compiler:
             - "@openzeppelin/contracts/utils=OpenZeppelin/openzeppelin-contracts@4.5.0/contracts/utils"
 # automatically fetch contract sources from Etherscan
 autofetch_sources: True
-networks:
-    default: avalanche-main-fork
