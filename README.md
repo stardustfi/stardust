@@ -4,6 +4,45 @@
 
 ![Github Actions](https://github.com/foundry-rs/forge-template/workflows/CI/badge.svg)
 
+## Installation
+
+1. To install with [Foundry](https://github.com/gakonst/foundry).
+
+2. Fork this repository (easier) or create a new repository using it as template. [Create from template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)
+
+3. Clone your newly created repository recursively to include modules.
+
+```sh
+git clone --recursive https://github.com/stardustfi/stardust
+
+# or clone normally and pull submodules
+git clone https://github.com/stardustfi/stardust
+git pull --recurse-submodules
+
+```
+
+NOTE: if you create from template you may need to run the following command to fetch the git submodules (.gitmodules for exact releases) `git submodule init && git submodule update`
+
+4. Build the project.
+
+```sh
+make build
+```
+
+5. Sign up for [Infura](https://infura.io/) and generate an API key and copy your RPC url. Store it in the `ETH_RPC_URL` environment variable.
+   NOTE: you can use other services.
+
+6. Use .env file
+7. Make a copy of `.env.example`
+8. Add the values for `ETH_RPC_URL`, `ETHERSCAN_API_KEY` and other example vars
+   NOTE: If you set up a global environment variable, that will take precedence.
+
+9. Run tests
+
+```sh
+make test
+```
+
 ## Local development
 
 This project uses [Foundry](https://github.com/gakonst/foundry) as the development framework.
